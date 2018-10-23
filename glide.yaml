@@ -1,0 +1,62 @@
+package: github.ibm.com/deep-learning-platform/dlaas-restapi-service
+import:
+- package: github.com/sirupsen/logrus
+  version: ~1.0.2
+- package: github.com/golang/glog
+  version: 23def4e6c14b4da8ac2ed8007337bc5eb5007998
+- package: github.com/coreos/go-oidc
+  version: a93f71fdfe73d2c0f5413c0565eea0af6523a6df
+  subpackages:
+  - http
+  - jose
+  - key
+  - oauth2
+  - oidc
+- package: github.com/cenkalti/backoff
+  version: ~1.0.0
+- package: github.com/dre1080/recover
+- package: github.com/go-openapi/errors
+- package: github.com/go-openapi/loads
+- package: github.com/go-openapi/runtime
+  subpackages:
+  - client
+  - flagext
+  - middleware
+  - security
+- package: github.com/go-openapi/spec
+- package: github.com/go-openapi/strfmt
+- package: github.com/go-openapi/swag
+- package: github.com/go-openapi/validate
+- package: github.com/golang/protobuf
+  subpackages:
+  - proto
+- package: github.com/jessevdk/go-flags
+  version: ~1.2.0
+- package: github.com/spf13/viper
+- package: github.com/tylerb/graceful
+  version: ~1.2.15
+- package: github.ibm.com/deep-learning-platform/dlaas-commons
+  repo: git@github.ibm.com:deep-learning-platform/dlaas-commons.git
+- package: github.ibm.com/deep-learning-platform/dlaas-trainer-service
+  repo: git@github.ibm.com:deep-learning-platform/dlaas-trainer-service.git
+- package: github.ibm.com/deep-learning-platform/dlaas-training-metrics-service
+  repo: git@github.ibm.com:deep-learning-platform/dlaas-training-metrics-service
+- package: golang.org/x/net
+  subpackages:
+  - context
+  - websocket
+  - ctxhttp
+- package: google.golang.org/grpc
+  version: ~1.4.2
+  subpackages:
+  - codes
+- package: gopkg.in/yaml.v2
+- package: k8s.io/client-go
+  version: v6.0.0
+testImports:
+- package: github.com/stretchr/testify
+  version: ~1.1.4
+  subpackages:
+  - assert
+- package: github.com/aws/aws-sdk-go
+  version: ~1.12.71
